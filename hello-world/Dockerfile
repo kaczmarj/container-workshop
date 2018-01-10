@@ -11,9 +11,6 @@ RUN apt-get update -qq \
 # Copy file from the host machine into the container.
 COPY helloworld.py /opt/helloworld.py
 
-# ENTRYPOINT is the command that is run when executing `docker run ...`.
-ENTRYPOINT ["python3"]
-
-# CMD provides default arguments to the entrypoint. A user can override these
+# CMD provides default execution options. A user can override these
 # arguments with `docker run <this_image> <args>`
-CMD ["/opt/helloworld.py"]
+CMD ["python3", "/opt/helloworld.py"]
