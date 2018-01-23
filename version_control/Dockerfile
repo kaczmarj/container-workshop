@@ -2,9 +2,6 @@ FROM neurodebian:stretch-non-free
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-#----------------------------------------------------------
-# Install common dependencies and create default entrypoint
-#----------------------------------------------------------
 RUN apt-get update -qq \
     && apt-get install -yq --no-install-recommends  \
       # General system packages
